@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPA Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>GPA Calculator</h1>
+</header>
+
+<section class="hero">
+    <h2>Semester GPA Calculator</h2>
+
+    <input type="number" id="c1" placeholder="Subject 1 Credit Hours">
+    <input type="number" id="g1" placeholder="Grade Points"><br><br>
+
+    <input type="number" id="c2" placeholder="Subject 2 Credit Hours">
+    <input type="number" id="g2" placeholder="Grade Points"><br><br>
+
+    <input type="number" id="c3" placeholder="Subject 3 Credit Hours">
+    <input type="number" id="g3" placeholder="Grade Points"><br><br>
+
+    <button onclick="calculateGPA()">Calculate GPA</button>
+
+    <h3 id="result"></h3>
+</section>
+
+<script>
+function calculateGPA() {
+
+    let c1 = parseFloat(document.getElementById("c1").value) || 0;
+    let g1 = parseFloat(document.getElementById("g1").value) || 0;
+
+    let c2 = parseFloat(document.getElementById("c2").value) || 0;
+    let g2 = parseFloat(document.getElementById("g2").value) || 0;
+
+    let c3 = parseFloat(document.getElementById("c3").value) || 0;
+    let g3 = parseFloat(document.getElementById("g3").value) || 0;
+
+    let totalCredits = c1 + c2 + c3;
+
+    if(totalCredits === 0){
+        document.getElementById("result").innerHTML = "Enter valid data!";
+        return;
+    }
+
+    let totalPoints = (c1*g1) + (c2*g2) + (c3*g3);
+
+    let gpa = totalPoints / totalCredits;
+
+    document.getElementById("result").innerHTML =
+        "Your GPA is: " + gpa.toFixed(2);
+}
+</script>
+
+</body>
+</html>

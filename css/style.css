@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6fa;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #002147, #004080);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00c3ff;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    color: #002147;
+}
+
+.hero p {
+    color: #555;
+    font-size: 18px;
+}
+
+/* CARD STYLE */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+button {
+    background-color: #002147;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004080;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.timetable {
+    margin: auto;
+    border-collapse: collapse;
+    width: 80%;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.timetable th, .timetable td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.timetable th {
+    background-color: #002147;
+    color: white;
+}
+
+.timetable tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* SUBJECT COLORS */
+.pf {
+    background-color: #cce5ff;
+}
+
+.ds {
+    background-color: #d4edda;
+}
+
+.db {
+    background-color: #fff3cd;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px){
+
+    nav a{
+        display: block;
+        margin: 10px 0;
+    }
+
+    .card-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 90%;
+    }
+
+    .hero h2{
+        font-size: 28px;
+    }
+
+    input{
+        width: 90%;
+    }
+
+    .timetable{
+        width: 95%;
+        font-size: 12px;
+    }
+
+    .timetable th,
+    .timetable td{
+        padding: 8px;
+    }
+
+}
+
+.timeline{
+    width: 80%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.event{
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 6px solid #002147;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.event:hover{
+    transform: translateX(10px);
+}
